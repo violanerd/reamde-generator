@@ -21,15 +21,20 @@ const questions = [
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {
-    return inquirer.prompt(questions)
-    .then(data => {
-        return generateMarkdown(data);
-    })
-    .then(markdown => {
-        console.log(markdown);
-    })
+async function init() {
+    const data = await inquirer.prompt(questions);
+    const markdown = generateMarkdown(data);
+    console.log(markdown);
 };
+// function init() {
+//     return inquirer.prompt(questions)
+//     .then(data => {
+//         return generateMarkdown(data);
+//     })
+//     .then(markdown => {
+//         console.log(markdown);
+//     })
+// };
 
 // Function call to initialize app
 init();
