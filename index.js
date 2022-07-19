@@ -1,14 +1,24 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-const fs = require('fs');
+const fs = require('fs'); // change this to how we did it in class
 const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const questions = [
     {
         type: 'input',
+        name: 'username',
+        message: 'What is your Github username?'
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email address?'
+    },
+    {
+        type: 'input',
         name: 'title',
-        message: 'What is your project title? (Required)'
+        message: 'What is your project title?'
     },
     {
         type: 'input',
@@ -16,9 +26,17 @@ const questions = [
         message: 'Describe your project'
     },
     {
+        type: 'list',
+        name: 'license',
+        message: 'What license should your project have?',
+        choices: ['MIT', 'Apache-2.0', 'GPL-3.0', 'CDDL-1.0', 'none'],
+        default: 'MIT'
+    },
+    {
         type: 'input',
         name: 'installation',
-        message: 'What are the steps required to install your project?'
+        message: 'What are the steps required to install your project?',
+        default: 'npm i'
     },
     {
         type: 'input',
@@ -27,13 +45,14 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'contributionGuidelines',
-        message: 'How can someone else contribute, what are the guidelines?'
+        name: 'contributing',
+        message: 'What does a user need to know about contributing?'
     },
     {
         type: 'input',
         name: 'testInstructions',
-        message: 'What are the instructions to test the application?'
+        message: 'What are the instructions to test the application?',
+        default: 'npm test'
     }
 ];
 
