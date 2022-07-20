@@ -22,8 +22,8 @@ function generateMarkdown(data) {
   * [Installation](#installation)
   * [Usage](#usage)
   * [License](#license)
-  * [Contribute](#contribute)
-  * [Test](#test)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
   * [Questions](#questions)
   
   ## Installation
@@ -38,11 +38,11 @@ function generateMarkdown(data) {
 
   ${data.license}
 
-  ## Contribute
+  ## Contributing
 
   ${data.contributing}
 
-  ## Test
+  ## Tests
 
   ${data.testInstructions}
 
