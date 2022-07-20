@@ -3,6 +3,17 @@ const inquirer = require('inquirer');
 const { writeFile } = require('node:fs/promises'); 
 const generateMarkdown = require('./utils/generateMarkdown');
 
+const dummyData = {
+    username: 'Maddy',
+    email: 'Test',
+    title: 'Test',
+    description: 'Test',
+    license: 'MIT',
+    installation: 'npm i',
+    usage: '',
+    contributing: '',
+    testInstructions: 'npm test'
+  }
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -63,7 +74,7 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 async function init() {
-    const data = await inquirer.prompt(questions);
+    const data = await inquirer.prompt(questions, dummyData);
     const markdown = generateMarkdown(data);
     writeToFile('README.md', markdown);
 };

@@ -1,5 +1,5 @@
 
-  # Hello
+  # Test
 
   ## Description 
   Test
@@ -8,8 +8,8 @@
   * [Installation](#installation)
   * [Usage](#usage)
   * [License](#license)
-  * [Contribute](#contribute)
-  * [Test](#test)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
   * [Questions](#questions)
   
   ## Installation
@@ -24,17 +24,17 @@
 
   MIT
 
-  ## Contribute
+  ## Contributing
 
-  Nothing
+  
 
-  ## Test
+  ## Tests
 
   npm test
 
   ## Questions
 
-  Contact me at Maddybear with any questions. 
+  Contact me at Test with any questions. 
 
   View more of my work here: [Maddy](https://github.com/Maddy).
 
