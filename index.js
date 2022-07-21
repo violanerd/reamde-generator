@@ -42,7 +42,7 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'Write out the instructions for use and include screenshots'
+        message: 'What does a user need to know to use your program?'
     },
     {
         type: 'input',
@@ -66,7 +66,7 @@ function writeToFile(fileName, data) {
 async function init() {
     const data = await inquirer.prompt(questions);
     const markdown = generateMarkdown(data);
-    writeToFile('README.md', markdown);
+    writeToFile('./dist/README.md', markdown);
 };
 
 // Function call to initialize app
