@@ -20,7 +20,13 @@
   ~~~
   ## Usage
   
-  Make sure to get the dependancies by running npm i. Then to run the program, node index.
+  Make sure to get the dependancies by running ```npm i```. Then to run the program, run ```node index```. 
+
+  ![run-program](assets/images/initializeprogram.png) 
+
+  Look for your completed readme in the dist folder.
+
+  ![completed-readme](assets/images/location.png)
   
   ## License
 
