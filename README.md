@@ -4,7 +4,7 @@
   
 
   ## Description 
-  A README generator built in node with inquirer.
+  A README generator built in node with inquirer. The project title is inspired by the Neal Stephenson book of the same name, [REAMDE](https://en.wikipedia.org/wiki/Reamde). 
 
   ## Table of Contents
   * [Installation](#installation)
@@ -27,6 +27,8 @@
   Look for your completed readme in the dist folder.
 
   ![completed-readme](assets/images/location.png)
+
+  To see the application demonstrated, watch the [walkthrough video](https://watch.screencastify.com/v/gRwaj3sTdxn3IulPntvC).
   
   ## License
 
