@@ -8,14 +8,9 @@ const licenseBadges = {
   "none": ""
 }
 
-
-
 function renderLicenseBadge(license) {
-  let userLicense = license;
-  let licensceBage = licenseBadges[userLicense];
-  console.log(userLicense, licensceBage);
-
-
+  let licensceBage = licenseBadges[license];
+  return licensceBage;
 }
 
 
@@ -25,13 +20,21 @@ function renderLicenseLink(license) {}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  let licenseMarkdown = '';
+  if (license !== 'none') {
+    licenseMarkdown = `This project is licensed under the ${license} license.`;
+  }
+  return licenseMarkdown;
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  renderLicenseBadge(data.license);
+
   return `
   # ${data.title}
+
+  ${renderLicenseBadge(data.license)}
 
   ## Description 
   ${data.description}
@@ -45,33 +48,28 @@ function generateMarkdown(data) {
   * [Questions](#questions)
   
   ## Installation
-
+  ~~~
   ${data.installation}
-
+  ~~~
   ## Usage
-
+  
   ${data.usage}
-
+  
   ## License
 
-  ${data.license}
+  ${renderLicenseSection(data.license)}
 
   ## Contributing
 
   ${data.contributing}
 
   ## Tests
-
+  ~~~
   ${data.testInstructions}
-
+  ~~~
   ## Questions
 
-  Contact me at ${data.email} with any questions. 
-
-  View more of my work here: [${data.username}](https://github.com/${data.username}).
-
-
-
+  Contact me at ${data.email} with any questions. View more of my work here: [${data.username}](https://github.com/${data.username}).
 
 `;
 
